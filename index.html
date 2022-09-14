@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İftar Uygulaması</title>
+
+  <!-- Bootstrap Style File  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <!-- Fontawesome Script File -->
+  <script src="https://kit.fontawesome.com/a9d5b4d683.js" crossorigin="anonymous"></script>
+
+  <!-- Private Style File -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body class="bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 location-icon">
+        <i class="fa-solid fa-map-location-dot" data-toggle="modal" data-target="#locationModal"></i>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p id="current-time"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 location">
+        <p id="country">TÜRKİYE</p>
+        <p id="city">NİĞDE</p>
+        <p id="county">NİĞDE</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="time-lef-text">İFTARA KALAN SÜRE</p>
+        <p id="time-left"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p id="imsak"></p>
+        <p id="gunes"></p>
+        <p id="ogle"></p>
+        <p id="ikindi"></p>
+        <p id="aksam"></p>
+        <p id="yatsi"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" tabindex="-1" id="locationModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Locasyon Seçme</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>ÜLKE</label>
+                <select class="form-control" id="countries" onchange="ChangeCoutry();">
+
+                </select>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>ŞEHİR</label>
+                <select class="form-control" id="cities" onchange="ChangeCity();">
+
+                </select>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>İLÇE</label>
+                <select class="form-control" id="counties">
+
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-primary" onclick="ChangeLocation();">Kaydet</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- Bootstrap Script File -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+<!-- Private Script File -->
+<script src="/mainScript.js"></script>
+
+</html>
